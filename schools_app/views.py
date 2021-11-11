@@ -1,3 +1,8 @@
 from django.shortcuts import render
+from django.views import generic
+from .models import School
+from .forms import SchoolForm
 
-# Create your views here.
+
+# class SchoolView(generic.CreateView):
+#     pass
