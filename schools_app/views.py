@@ -4,5 +4,6 @@ from .models import School
 from .forms import SchoolForm
 
 
-# class SchoolView(generic.CreateView):
-#     pass
+
+class SchoolView(generic.CreateView):
+    pass

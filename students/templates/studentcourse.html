@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>StudentCourse List</title>
+</head>
+<body>
+    {% for studentcourse in studentcourses %}
+        <p>~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</p>
+        studentcourse student: {{ studentcourse.student }}<br>
+        studentcourse course: {{ studentcourse.course }}<br>
+
+    {% endfor %}
+
+    <form action="" method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Add StudentCourses</button>
+    </form>
+
+
+</body>
+</html>

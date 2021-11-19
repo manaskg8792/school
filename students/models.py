@@ -14,10 +14,12 @@ class Students(models.Model):
         return self.name
 
 
-class StudentCourse(models.Model):
+class StudentCourses(models.Model):
     student = models.ForeignKey(Students, on_delete=models.CASCADE)
     course = models.ForeignKey('courses.Courses', on_delete=models.PROTECT)
 
+    def __str__(self):
+        return f'{self.student}, {self.course}'
 
 
 
